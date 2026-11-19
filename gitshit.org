@@ -1,0 +1,93 @@
+* three accounts
+
+* creating repo in account fuqyumeen
+-git init
+make one file
+-git add .
+-git commit -m "initial commit"
+-git remote -v
+-git config --global user.name "fuqyumeen"
+-git config --global user.email "bludcook84@gmail.com"
+-git remote set-url origin git@github-fuqyumeen: whatever_the_reponame.git
+-git push origin main/master
+
+* creating a fork to this yeatzzy repo from profile fuqyumeen
+generate the fork url link
+
+just normal clone first the repo
+now set the remote -v with the url of fork
+-git remote set-url origin ------link of fork
+-git add .
+-git commit
+-git push 
+
+* make pull request
+simply go to your profile first
+check the forked repo
+and go and request for pr
+
+* how to validate the pullrequest
+go to the main account here is fuqyumeen
+then select the pr to repo
+and simple commit it
+
+** from command line
+-git fetch origin pull/4/head:pr-4
+bascially git provid every pr #number so
+-git fetch origin pull/#number-of-that-pr/head:pr-#number   ...and this pr-4 is nothing but the name of branch
+for ease
+
+now how to merge it right?
+well just checkout to master or main branch
+
+-git switch master
+
+and simply merge it using this command
+-git merge pr-4
+
+and to make it officially to profile
+-git push origin master/main
+
+* how to fetch the latest push of repo
+git fetch origin
+git pull origin main
+
+and do this shit
+
+
+* very important shit
+** if something is not working first check your remote -v url
+** check where you stand in which commit
+** check when to fork and when to clone and if it can work without doing all this imean try first pushing main
+
+* visualize the graph
+-git log --oneline --graph --decorate --all
+
+* check branches
+git branch
+** swtich between branches
+git switch branchname
+
+** create new branch
+git switch new_brach_name
+
+
+
+* git upstream concept
+its nothing but a nickname for a repository yrl
+for example
+git remote add upstream git@github.com:fuqyumeen/typeshit.git
+
+
+youre telling github
+"when i say upstream, use this repository URL"
+
+git merge upstream/master
+it means
+
+-upstream -> original repository
+-master -> its master branch
+-git merge -> integrate its changes into your currently checked-out branch
+
+* check differnce between two commit
+git diff commit-onecode commit-twoconde
